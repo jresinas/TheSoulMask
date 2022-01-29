@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4a41fcc727932d4a95ac44738ffd21c, type: 3}
+  m_Name: D1.2
+  m_EditorClassIdentifier: 
+  leftOption: {fileID: 11400000, guid: 9753f9df30d4bc34494dffb9f6347241, type: 2}
+  rightOption: {fileID: 11400000, guid: 9753f9df30d4bc34494dffb9f6347241, type: 2}
+  text: D1.2
+  leftOptionText: 
+  rightOptionText: 
+  altLeftOptionText: 
+  altRightOptionText: 
+  dreamText: Noche D1.2
+  leftOptionValue: 0
+  rightOptionValue: 0
+  picture: {fileID: 0}
+  altPicture: {fileID: 0}
+  master: 0
+  slave: 0

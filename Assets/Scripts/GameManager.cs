@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum CardOption {
+    left, right
+}
+
 public class GameManager : MonoBehaviour {
     public static GameManager instance = null;
 
@@ -11,6 +15,7 @@ public class GameManager : MonoBehaviour {
     [SerializeField] CardScriptableObject startingCard;
     CardScriptableObject currentCard;
     public int score = 0;
+    public Dictionary<int, CardOption> masterSlave = new Dictionary<int, CardOption>();
 
 
     public float CLOSE_EYES_TIME = 0.5f;

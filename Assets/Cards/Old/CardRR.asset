@@ -20,3 +20,7 @@ MonoBehaviour:
   altLeftOptionText: 
   altRightOptionText: 
   dreamText: "Sue\xF1o noche Derecha Derecha"
+  leftOptionValue: 0
+  rightOptionValue: 0
+  picture: {fileID: 21300000, guid: 06e7bceea1f3ca24daf036bfd87fe47f, type: 3}
+  altPicture: {fileID: 0}

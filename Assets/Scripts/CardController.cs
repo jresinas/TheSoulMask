@@ -66,14 +66,25 @@ public class CardController : MonoBehaviour, IBeginDragHandler, IEndDragHandler,
         CloseCard();
         leftOption.Close();
         GameManager.instance.score += cardData.rightOptionValue;
-        Utils.instance.Timer(TIME_BEFORE_SLEEP, () => GameManager.instance.EndDay(cardData.rightOption));
+        if (cardData.master != 0) GameManager.instance.masterSlave.Add(cardData.master, CardOption.right);
+        SelectCard(cardData.rightOption);
     }
 
     void SelectLeft() {
         CloseCard();
         rightOption.Close();
         GameManager.instance.score += cardData.leftOptionValue;
-        Utils.instance.Timer(TIME_BEFORE_SLEEP, () => GameManager.instance.EndDay(cardData.leftOption));
+        if (cardData.master != 0) GameManager.instance.masterSlave.Add(cardData.master, CardOption.left);
+        SelectCard(cardData.leftOption);
+    }
+
+    void SelectCard(CardScriptableObject card) {
+        CardScriptableObject selectedCard = card;
+        if (cardData.slave != 0 && GameManager.instance.masterSlave.ContainsKey(cardData.slave)) {
+            if (GameManager.instance.masterSlave[cardData.slave] == CardOption.left) selectedCard = cardData.leftOption;
+            else if (GameManager.instance.masterSlave[cardData.slave] == CardOption.right) selectedCard = cardData.rightOption;
+        }
+        Utils.instance.Timer(TIME_BEFORE_SLEEP, () => GameManager.instance.EndDay(selectedCard));
     }
 
     void ReturnStartPosition() {

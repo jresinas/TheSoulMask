@@ -16,4 +16,6 @@ public class CardScriptableObject : ScriptableObject {
     public int rightOptionValue;
     public Sprite picture;
     public Sprite altPicture;
+    public int master;
+    public int slave;
 }

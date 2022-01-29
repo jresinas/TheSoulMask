@@ -10,13 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4a41fcc727932d4a95ac44738ffd21c, type: 3}
-  m_Name: CardLR
+  m_Name: D2
   m_EditorClassIdentifier: 
-  leftOption: {fileID: 0}
-  rightOption: {fileID: 0}
-  text: "Opci\xF3n Izquierda Derecha"
-  leftOptionText: LR Opc L
-  rightOptionText: LR Opc R
+  leftOption: {fileID: 11400000, guid: 361b45d2714267c4bb0f151562b88294, type: 2}
+  rightOption: {fileID: 11400000, guid: 7d5b4606e5c0ef04b95b346dea8f83c9, type: 2}
+  text: D2
+  leftOptionText: Opc Izq
+  rightOptionText: Opc Der
   altLeftOptionText: 
   altRightOptionText: 
-  dreamText: "Sue\xF1o noche Izquierda Derecha"
+  dreamText: Noche D2
+  leftOptionValue: 0
+  rightOptionValue: 0
+  picture: {fileID: 0}
+  altPicture: {fileID: 0}
+  master: 0
+  slave: 1
