@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour {
     public CardController card;
     public ClipboardController clipboard;
     public DreamTextController dreamText;
+    public GameObject blackPanel;
+    public GameObject redPanel;
     [SerializeField] CardScriptableObject startingCard;
     CardScriptableObject currentCard;
     public int score = 0;
@@ -45,10 +47,12 @@ public class GameManager : MonoBehaviour {
     }
 
     void Wake(CardScriptableObject cardData) {
+        currentCard = cardData;
+        blackPanel.SetActive(false);
+        redPanel.SetActive(false);
         Utils.instance.OpenEyes(OPEN_EYES_TIME, () => StartDay(cardData));
     }
 
     void StartDay(CardScriptableObject cardData) {
-        currentCard = cardData;
     }
 }

@@ -18,9 +18,13 @@ public class OptionController : MonoBehaviour {
     public void SetHighlight(bool status) {
         highlight = status;
         if (highlight) {
+            //textBox.fontStyle = FontStyles.Bold;
+            //textBox.fontSize = 42;
             textBox.color = Color.red;
             if (altText != "") ShowText(altText);
         } else {
+            //textBox.fontStyle = FontStyles.Normal;
+            //textBox.fontSize = 36;
             textBox.color = Color.black;
             ShowText(normalText);
         }

@@ -6,7 +6,6 @@ using UnityEngine;
 public class CardScriptableObject : ScriptableObject {
     public CardScriptableObject leftOption;
     public CardScriptableObject rightOption;
-    public string text;
     public string leftOptionText;
     public string rightOptionText;
     public string altLeftOptionText;

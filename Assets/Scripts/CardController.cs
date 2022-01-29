@@ -8,10 +8,10 @@ using TMPro;
 public class CardController : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler {
     //[SerializeField] ClipboardController clipboard;
     [SerializeField] RectTransform rectTransform;
-    [SerializeField] TextMeshProUGUI cardText;
     [SerializeField] Image cardPicture;
     [SerializeField] OptionController leftOption;
     [SerializeField] OptionController rightOption;
+
     public float THRESHOLD = 400;
     public float MAX_MOVEMENT = 600;
     public float ZOOM_CARD_TIME = 0.25f;
@@ -30,7 +30,6 @@ public class CardController : MonoBehaviour, IBeginDragHandler, IEndDragHandler,
     public void LoadCard(CardScriptableObject card) {
         block = true;
         cardData = card;
-        cardText.text = card.text;
         cardPicture.sprite = cardData.picture;
         leftOption.gameObject.SetActive(false);
         rightOption.gameObject.SetActive(false);
@@ -53,7 +52,6 @@ public class CardController : MonoBehaviour, IBeginDragHandler, IEndDragHandler,
     }
 
     public void OnEndDrag(PointerEventData eventData) {
-        Debug.Log(rectTransform.position);
         if (rectTransform.localPosition.x >= THRESHOLD) SelectRight();
         else if (rectTransform.localPosition.x <= -THRESHOLD) SelectLeft();
         else ReturnStartPosition();
@@ -92,6 +90,7 @@ public class CardController : MonoBehaviour, IBeginDragHandler, IEndDragHandler,
     }
 
     public void OpenCard() {
+        GameManager.instance.blackPanel.SetActive(true);
         rectTransform.localPosition = Vector3.zero;
         Utils.instance.ZoomIn(rectTransform, ZOOM_CARD_TIME, () => CardOpened());
     }
@@ -110,6 +109,7 @@ public class CardController : MonoBehaviour, IBeginDragHandler, IEndDragHandler,
     }
 
     void Transform() {
+        GameManager.instance.redPanel.SetActive(true);
         cardPicture.sprite = cardData.altPicture;
         Utils.instance.OpenEyes(OPEN_EYES_TIME);
     }

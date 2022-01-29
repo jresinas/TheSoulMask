@@ -15,14 +15,14 @@ MonoBehaviour:
   leftOption: {fileID: 0}
   rightOption: {fileID: 0}
   text: D3
-  leftOptionText: 
-  rightOptionText: 
-  altLeftOptionText: 
-  altRightOptionText: 
+  leftOptionText: Left Opt
+  rightOptionText: Right Opt
+  altLeftOptionText: Other Left Opt
+  altRightOptionText: Other Right Opt
   dreamText: 
   leftOptionValue: 0
   rightOptionValue: 0
-  picture: {fileID: 0}
-  altPicture: {fileID: 0}
+  picture: {fileID: 21300000, guid: 06e7bceea1f3ca24daf036bfd87fe47f, type: 3}
+  altPicture: {fileID: 21300000, guid: 632a0589b4a3f5542aa482f1a40ad378, type: 3}
   master: 0
   slave: 0
