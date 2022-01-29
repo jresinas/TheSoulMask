@@ -493,7 +493,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -924,6 +924,7 @@ MonoBehaviour:
   clipboard: {fileID: 2043612263}
   dreamText: {fileID: 1841560785}
   startingCard: {fileID: 11400000, guid: 1a258665448ed564686d555b44455ba6, type: 2}
+  score: 0
   CLOSE_EYES_TIME: 0.5
   OPEN_EYES_TIME: 0.5
   SLEEP_TIME: 1.5
@@ -1146,12 +1147,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 1125018971}
   cardText: {fileID: 656535894}
+  cardPicture: {fileID: 1125018973}
   leftOption: {fileID: 904439933}
   rightOption: {fileID: 174666138}
   THRESHOLD: 400
   MAX_MOVEMENT: 600
   ZOOM_CARD_TIME: 0.25
   TIME_BEFORE_SLEEP: 1
+  BLOCK_DRAG_TIME: 2
+  TIME_BEFORE_TRANSFORM: 1.5
+  CLOSE_EYES_TIME: 0.5
+  OPEN_EYES_TIME: 0.5
+  block: 1
 --- !u!114 &1125018973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1165,7 +1172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

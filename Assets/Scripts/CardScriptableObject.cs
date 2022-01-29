@@ -14,5 +14,6 @@ public class CardScriptableObject : ScriptableObject {
     public string dreamText;
     public int leftOptionValue;
     public int rightOptionValue;
-    public bool transform;
+    public Sprite picture;
+    public Sprite altPicture;
 }

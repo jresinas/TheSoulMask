@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
 
@@ -8,25 +9,35 @@ public class CardController : MonoBehaviour, IBeginDragHandler, IEndDragHandler,
     //[SerializeField] ClipboardController clipboard;
     [SerializeField] RectTransform rectTransform;
     [SerializeField] TextMeshProUGUI cardText;
+    [SerializeField] Image cardPicture;
     [SerializeField] OptionController leftOption;
     [SerializeField] OptionController rightOption;
     public float THRESHOLD = 400;
     public float MAX_MOVEMENT = 600;
     public float ZOOM_CARD_TIME = 0.25f;
     public float TIME_BEFORE_SLEEP = 1f;
+    public float BLOCK_DRAG_TIME = 2f;
 
+    public float TIME_BEFORE_TRANSFORM = 1.5f;
+    public float CLOSE_EYES_TIME = 0.5f;
+    public float OPEN_EYES_TIME = 0.5f;
+
+    public bool block;
     float offset;
 
     CardScriptableObject cardData;
 
     public void LoadCard(CardScriptableObject card) {
+        block = true;
         cardData = card;
         cardText.text = card.text;
+        cardPicture.sprite = cardData.picture;
         leftOption.gameObject.SetActive(false);
         rightOption.gameObject.SetActive(false);
     }
 
     public void OnBeginDrag(PointerEventData eventData) {
+        if (block) eventData.pointerDrag = null;
         offset = rectTransform.position.x - Input.mousePosition.x;
     }
 
@@ -79,6 +90,17 @@ public class CardController : MonoBehaviour, IBeginDragHandler, IEndDragHandler,
         rightOption.gameObject.SetActive(true);
         leftOption.LoadData(cardData.leftOptionText, cardData.altLeftOptionText);
         rightOption.LoadData(cardData.rightOptionText, cardData.altRightOptionText);
+        Utils.instance.Timer(BLOCK_DRAG_TIME, () => { block = false; });
+        if (cardData.altPicture != null) Utils.instance.Timer(TIME_BEFORE_TRANSFORM, () => StartTransform());
+    }
+
+    void StartTransform() {
+        Utils.instance.CloseEyes(CLOSE_EYES_TIME, () => Transform());
+    }
+
+    void Transform() {
+        cardPicture.sprite = cardData.altPicture;
+        Utils.instance.OpenEyes(OPEN_EYES_TIME);
     }
 
     void CloseCard() {
