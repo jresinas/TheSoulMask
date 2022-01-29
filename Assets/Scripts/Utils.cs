@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Utils : MonoBehaviour {
     public static Utils instance;
@@ -103,5 +104,22 @@ public class Utils : MonoBehaviour {
         Vector3 bottomLidEnd = new Vector3(0, -930);
         Move(topLid, topLidStart, topLidEnd, time, callback);
         Move(bottomLid, bottomLidStart, bottomLidEnd, time);
+    }
+
+
+    public void Fade(Image image, float time, bool fadeOut = true, Action callback = null) {
+        StartCoroutine(FadeOut(image, time, fadeOut, callback));
+    }
+
+    IEnumerator FadeOut(Image image, float time, bool fadeOut, Action callback = null) {
+        Color color = image.color;
+        for (float f = 0; f <= time; f += Time.deltaTime) {
+            if (image.gameObject == null) break;
+            if (fadeOut) color.a = Mathf.Lerp(1f, 0f, f / time);
+            else color.a = Mathf.Lerp(0f, 1f, f / time);
+            image.color = color;
+            yield return null;
+        }
+        if (callback != null) callback();
     }
 }

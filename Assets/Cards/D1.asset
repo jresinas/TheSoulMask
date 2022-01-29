@@ -21,8 +21,8 @@ MonoBehaviour:
   dreamText: 
   leftOptionValue: 0
   rightOptionValue: 0
-  picture: {fileID: 21300000, guid: 06e7bceea1f3ca24daf036bfd87fe47f, type: 3}
+  picture: {fileID: 21300000, guid: 383121a2ab2d84948a4f5ba5a1201acc, type: 3}
   altPicture: {fileID: 0}
   master: 1
   slave: 0
-  seal: {fileID: 21300000, guid: 190acbe997b20054db6122120f28c67b, type: 3}
+  seal: {fileID: 21300000, guid: 644b8717c5da2294d95bd9b1f255b9e5, type: 3}
