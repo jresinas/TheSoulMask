@@ -29,4 +29,12 @@ public class OptionController : MonoBehaviour {
     void ShowText(string txt) {
         textBox.text = txt;
     }
+
+    //public void Hold(float time) {
+    //    Utils.instance.Timer(time, () => Close());
+    //}
+
+    public void Close() {
+        gameObject.SetActive(false);
+    }
 }

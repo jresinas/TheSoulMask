@@ -12,4 +12,7 @@ public class CardScriptableObject : ScriptableObject {
     public string altLeftOptionText;
     public string altRightOptionText;
     public string dreamText;
+    public int leftOptionValue;
+    public int rightOptionValue;
+    public bool transform;
 }

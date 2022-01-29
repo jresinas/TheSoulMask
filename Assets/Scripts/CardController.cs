@@ -13,6 +13,7 @@ public class CardController : MonoBehaviour, IBeginDragHandler, IEndDragHandler,
     public float THRESHOLD = 400;
     public float MAX_MOVEMENT = 600;
     public float ZOOM_CARD_TIME = 0.25f;
+    public float TIME_BEFORE_SLEEP = 1f;
 
     float offset;
 
@@ -21,6 +22,8 @@ public class CardController : MonoBehaviour, IBeginDragHandler, IEndDragHandler,
     public void LoadCard(CardScriptableObject card) {
         cardData = card;
         cardText.text = card.text;
+        leftOption.gameObject.SetActive(false);
+        rightOption.gameObject.SetActive(false);
     }
 
     public void OnBeginDrag(PointerEventData eventData) {
@@ -28,8 +31,6 @@ public class CardController : MonoBehaviour, IBeginDragHandler, IEndDragHandler,
     }
 
     public void OnDrag(PointerEventData eventData) {
-        Debug.Log(Input.mousePosition.x);
-        //transform.position = new Vector2(Mathf.Clamp(Input.mousePosition.x, -MAX_MOVEMENT, MAX_MOVEMENT), transform.position.y);
         rectTransform.position = new Vector2(Input.mousePosition.x + offset, rectTransform.position.y);
         if (rectTransform.localPosition.x > MAX_MOVEMENT) rectTransform.localPosition = new Vector2(MAX_MOVEMENT, rectTransform.localPosition.y);
         else if (rectTransform.localPosition.x < -MAX_MOVEMENT) rectTransform.localPosition = new Vector2(-MAX_MOVEMENT, rectTransform.localPosition.y);
@@ -51,28 +52,26 @@ public class CardController : MonoBehaviour, IBeginDragHandler, IEndDragHandler,
     }
 
     void SelectRight() {
-        Debug.Log("right");
         CloseCard();
-        GameManager.instance.EndDay(cardData.rightOption);
+        leftOption.Close();
+        GameManager.instance.score += cardData.rightOptionValue;
+        Utils.instance.Timer(TIME_BEFORE_SLEEP, () => GameManager.instance.EndDay(cardData.rightOption));
     }
 
     void SelectLeft() {
-        Debug.Log("left");
         CloseCard();
-        GameManager.instance.EndDay(cardData.leftOption);
+        rightOption.Close();
+        GameManager.instance.score += cardData.leftOptionValue;
+        Utils.instance.Timer(TIME_BEFORE_SLEEP, () => GameManager.instance.EndDay(cardData.leftOption));
     }
 
     void ReturnStartPosition() {
-        Debug.Log("startPosition");
         rectTransform.localPosition = Vector3.zero;
     }
 
     public void OpenCard() {
         rectTransform.localPosition = Vector3.zero;
         Utils.instance.ZoomIn(rectTransform, ZOOM_CARD_TIME, () => CardOpened());
-        //Vector3 startPos = Camera.main.ScreenToWorldPoint(clipboard.transform.position);
-        //Debug.Log(startPos);
-        //Utils.instance.Move(rectTransform, startPos, Vector3.zero, 0.5f);
     }
 
     void CardOpened() {
@@ -83,8 +82,6 @@ public class CardController : MonoBehaviour, IBeginDragHandler, IEndDragHandler,
     }
 
     void CloseCard() {
-        leftOption.gameObject.SetActive(false);
-        rightOption.gameObject.SetActive(false);
         Utils.instance.ZoomOut(rectTransform, ZOOM_CARD_TIME, () => EndCloseCard());
         Utils.instance.Move(rectTransform, rectTransform.localPosition, Vector3.zero, ZOOM_CARD_TIME);
     }

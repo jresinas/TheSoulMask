@@ -9,8 +9,9 @@ public class GameManager : MonoBehaviour {
     public ClipboardController clipboard;
     public DreamTextController dreamText;
     [SerializeField] CardScriptableObject startingCard;
-
     CardScriptableObject currentCard;
+    public int score = 0;
+
 
     public float CLOSE_EYES_TIME = 0.5f;
     public float OPEN_EYES_TIME = 0.5f;
