@@ -17,4 +17,5 @@ public class CardScriptableObject : ScriptableObject {
     public Sprite altPicture;
     public int master;
     public int slave;
+    public Sprite seal;
 }

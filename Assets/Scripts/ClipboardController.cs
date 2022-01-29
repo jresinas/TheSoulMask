@@ -4,7 +4,11 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class ClipboardController : MonoBehaviour, IPointerClickHandler {
-    //[SerializeField] CardController card;
+    [SerializeField] SpriteRenderer seal;
+
+    public void LoadData(CardScriptableObject card) {
+        seal.sprite = card.seal;
+    }
 
     public void OnPointerClick(PointerEventData eventData) {
         OpenCard();

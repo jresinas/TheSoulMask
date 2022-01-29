@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftOption: {fileID: 11400000, guid: d88a9e0ad7bdac84abb87a6fa790cefc, type: 2}
   rightOption: {fileID: 11400000, guid: d88a9e0ad7bdac84abb87a6fa790cefc, type: 2}
-  text: D1
   leftOptionText: Opc Izq
   rightOptionText: Opc Der
   altLeftOptionText: 
@@ -26,3 +25,4 @@ MonoBehaviour:
   altPicture: {fileID: 0}
   master: 1
   slave: 0
+  seal: {fileID: 21300000, guid: 190acbe997b20054db6122120f28c67b, type: 3}

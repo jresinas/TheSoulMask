@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour {
     public GameObject blackPanel;
     public GameObject redPanel;
     [SerializeField] CardScriptableObject startingCard;
-    CardScriptableObject currentCard;
+    //CardScriptableObject currentCard;
     public int score = 0;
     public Dictionary<int, CardOption> masterSlave = new Dictionary<int, CardOption>();
 
@@ -32,7 +32,8 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         card.LoadCard(startingCard);
-        currentCard = startingCard;
+        clipboard.LoadData(startingCard);
+        //currentCard = startingCard;
     }
 
     public void EndDay(CardScriptableObject cardData) {
@@ -41,18 +42,28 @@ public class GameManager : MonoBehaviour {
 
     void Sleeping(CardScriptableObject cardData) {
         dreamText.gameObject.SetActive(true);
-        Utils.instance.Timer(DREAMTEXT_DELAYTIME, () => dreamText.ShowText(cardData.dreamText, DREAMTEXT_TIME));
-        Utils.instance.Timer(SLEEP_TIME, () => Wake(cardData));
-        card.LoadCard(cardData);
+ 
+        if (cardData != null) {
+            Utils.instance.Timer(DREAMTEXT_DELAYTIME, () => dreamText.ShowText(cardData.dreamText, DREAMTEXT_TIME));
+            Utils.instance.Timer(SLEEP_TIME, () => Wake(cardData));
+        } else {
+            EndGame();
+        }
     }
 
     void Wake(CardScriptableObject cardData) {
-        currentCard = cardData;
+        card.LoadCard(cardData);
+        clipboard.LoadData(cardData);
+        //currentCard = cardData;
         blackPanel.SetActive(false);
         redPanel.SetActive(false);
         Utils.instance.OpenEyes(OPEN_EYES_TIME, () => StartDay(cardData));
     }
 
     void StartDay(CardScriptableObject cardData) {
+    }
+
+    void EndGame() {
+
     }
 }

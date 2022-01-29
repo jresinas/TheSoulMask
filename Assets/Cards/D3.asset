@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftOption: {fileID: 0}
   rightOption: {fileID: 0}
-  text: D3
   leftOptionText: Left Opt
   rightOptionText: Right Opt
   altLeftOptionText: Other Left Opt
@@ -26,3 +25,4 @@ MonoBehaviour:
   altPicture: {fileID: 21300000, guid: 632a0589b4a3f5542aa482f1a40ad378, type: 3}
   master: 0
   slave: 0
+  seal: {fileID: 21300000, guid: 644b8717c5da2294d95bd9b1f255b9e5, type: 3}
