@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftOption: {fileID: 11400000, guid: d88a9e0ad7bdac84abb87a6fa790cefc, type: 2}
   rightOption: {fileID: 11400000, guid: d88a9e0ad7bdac84abb87a6fa790cefc, type: 2}
-  leftOptionText: Opc Izq
-  rightOptionText: Opc Der
+  leftOptionText: A considerate gesture it is but we are self sufficient  enough
+    to kindly decline their offering
+  rightOptionText: Let the spirits bless our new friends as we will kindly accept
+    their proposition.
   altLeftOptionText: 
   altRightOptionText: 
   dreamText: 

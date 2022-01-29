@@ -14,15 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftOption: {fileID: 0}
   rightOption: {fileID: 0}
-  leftOptionText: Left Opt
-  rightOptionText: Right Opt
-  altLeftOptionText: Other Left Opt
-  altRightOptionText: Other Right Opt
+  leftOptionText: The spirits have  taken a stance. You should punish him but also
+    reeducate him with our traditions.
+  rightOptionText: "That is completely UNACCEPTABLE!! The spirits impose a severe
+    punishment for the kid\xB4s dishonour"
+  altLeftOptionText: "That is completely UNACCEPTABLE!! The spirits impose a severe
+    punishment for the kid\xB4s dishonour"
+  altRightOptionText: 
   dreamText: 
   leftOptionValue: 0
   rightOptionValue: 0
-  picture: {fileID: 21300000, guid: 06e7bceea1f3ca24daf036bfd87fe47f, type: 3}
+  picture: {fileID: 21300000, guid: 3e7396b60b099c84891329a6c3fbf5f0, type: 3}
   altPicture: {fileID: 21300000, guid: 632a0589b4a3f5542aa482f1a40ad378, type: 3}
   master: 0
   slave: 0
-  seal: {fileID: 21300000, guid: 3b17afe83e0e9d94187dbd3d833e4130, type: 3}
+  seal: {fileID: 21300000, guid: df0c74b24a7f13d4cb5e750a1698920b, type: 3}

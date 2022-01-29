@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftOption: {fileID: 11400000, guid: 9753f9df30d4bc34494dffb9f6347241, type: 2}
   rightOption: {fileID: 11400000, guid: 9753f9df30d4bc34494dffb9f6347241, type: 2}
-  leftOptionText: 
-  rightOptionText: 
+  leftOptionText: Acts like this will not be tolerated. Send our best warriors to
+    claim not only what is rightfully ours but also their lives.
+  rightOptionText: Wisdom must be our guide and not our thirst for revenge. Leave
+    them alone as their supplies may be sparse.
   altLeftOptionText: 
   altRightOptionText: 
   dreamText: Noche D1.1

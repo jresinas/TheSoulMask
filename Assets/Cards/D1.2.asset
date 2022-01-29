@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftOption: {fileID: 11400000, guid: 9753f9df30d4bc34494dffb9f6347241, type: 2}
   rightOption: {fileID: 11400000, guid: 9753f9df30d4bc34494dffb9f6347241, type: 2}
-  leftOptionText: 
-  rightOptionText: 
+  leftOptionText: Same amount of weath for us but greater fish for them? Not an honest
+    Exchange. We must decline this time.
+  rightOptionText: As blessed as our river is it would be greedy not to share it
+    with our fellow neighbours.
   altLeftOptionText: 
   altRightOptionText: 
   dreamText: Noche D1.2
