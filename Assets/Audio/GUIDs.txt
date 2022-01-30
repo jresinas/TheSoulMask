@@ -1,7 +1,11 @@
 {8c08ef71-7926-4177-b35c-6a1b453753a8} bank:/Master
 {1415cfa5-085d-0d35-3515-e0e5b4c45530} bank:/Master.strings
 {b8ce4181-3eda-4fba-9d0c-da8189dc2e7c} bus:/
+{6e3a4995-2f13-4924-8972-85a4e4aebd38} bus:/Music+Ambient_BUS
 {5591e1b2-a94d-4c86-a715-5eafcb46713d} bus:/Reverb
+{7f808bb6-b245-4a80-a15a-b9e5aac1a74e} bus:/SFX_BUS
+{e40f1c5b-cfcf-4ff3-b819-d0f138e49d80} event:/Click1
+{c9e7d6e6-d509-479b-a8f6-8f728b145e3a} event:/Click2
 {1c8ab094-3f94-4b5d-ad9a-81907ccf165b} event:/Music+Ambient
 {4eaf79f5-7fc7-42e8-9770-26751a9d3d0c} parameter:/CardPos
 {6f076093-007a-4ef1-8c72-71333ced1211} parameter:/Progress
