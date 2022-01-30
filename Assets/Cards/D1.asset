@@ -23,7 +23,7 @@ MonoBehaviour:
   dreamText: 
   leftOptionValue: 0
   rightOptionValue: 0
-  picture: {fileID: 21300000, guid: 383121a2ab2d84948a4f5ba5a1201acc, type: 3}
+  picture: {fileID: 21300000, guid: 96153d2fd6d66a24d9b2e46434699eeb, type: 3}
   altPicture: {fileID: 0}
   master: 1
   slave: 0
