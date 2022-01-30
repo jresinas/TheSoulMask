@@ -16,7 +16,8 @@ public class Utils : MonoBehaviour {
     */
 
     void Awake() {
-        instance = this;    
+        instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     /*

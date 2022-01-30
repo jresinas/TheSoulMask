@@ -16,11 +16,11 @@ public class GameManager : MonoBehaviour {
     public GameObject redPanel;
     public EndingController ending;
     [SerializeField] CardScriptableObject startingCard;
-    //CardScriptableObject currentCard;
+
     public int score = 0;
     public Dictionary<int, CardOption> masterSlave = new Dictionary<int, CardOption>();
 
-
+    public float START_GAME_DELAYTIME = 2f;
     public float CLOSE_EYES_TIME = 0.5f;
     public float OPEN_EYES_TIME = 0.5f;
     public float SLEEP_TIME = 1.5f;
@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour {
     void Start() {
         card.LoadCard(startingCard);
         clipboard.LoadData(startingCard);
-        //currentCard = startingCard;
+        Utils.instance.Timer(START_GAME_DELAYTIME, () => Utils.instance.OpenEyes(OPEN_EYES_TIME));
     }
 
     public void EndDay(CardScriptableObject cardData) {
@@ -60,7 +60,6 @@ public class GameManager : MonoBehaviour {
     void Wake(CardScriptableObject cardData) {
         card.LoadCard(cardData);
         clipboard.LoadData(cardData);
-        //currentCard = cardData;
         blackPanel.SetActive(false);
         redPanel.SetActive(false);
         Utils.instance.OpenEyes(OPEN_EYES_TIME, () => StartDay(cardData));

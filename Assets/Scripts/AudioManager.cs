@@ -39,7 +39,10 @@ public static class AudioManager {
     /// </summary>
     /// <param name="value">
     /// 0: menu
-    /// 1: initial level
+    /// 1..4: music intensity
+    /// 7: good ending
+    /// 8: neutral ending
+    /// 9: evil ending
     /// 10: credits
     /// </param>
     public static void SetProgress(int value) {
