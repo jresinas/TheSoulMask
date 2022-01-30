@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour {
     public DreamTextController dreamText;
     public GameObject blackPanel;
     public GameObject redPanel;
+    public EndingController ending;
     [SerializeField] CardScriptableObject startingCard;
     //CardScriptableObject currentCard;
     public int score = 0;
@@ -70,6 +71,6 @@ public class GameManager : MonoBehaviour {
     }
 
     void EndGame() {
-
+        ending.EndGame(score);
     }
 }

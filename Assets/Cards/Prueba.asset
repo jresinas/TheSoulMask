@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4a41fcc727932d4a95ac44738ffd21c, type: 3}
+  m_Name: Prueba
+  m_EditorClassIdentifier: 
+  leftOption: {fileID: 0}
+  rightOption: {fileID: 0}
+  leftOptionText: My blessings to that marriage! Fortune and prosperity awaits to
+    those loving souls.
+  rightOptionText: This is not but a distraction the spirits say. Let them be guided
+    by the spirits to focus on their work.
+  altLeftOptionText: 
+  altRightOptionText: 
+  dreamText: Noche D2
+  leftOptionValue: 0
+  rightOptionValue: 0
+  picture: {fileID: 21300000, guid: 96389fbcc7a3d214daf61c472047f4e2, type: 3}
+  altPicture: {fileID: 0}
+  master: 0
+  slave: 0
+  seal: {fileID: 21300000, guid: 190acbe997b20054db6122120f28c67b, type: 3}
