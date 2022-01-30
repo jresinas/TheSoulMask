@@ -18,7 +18,7 @@ MonoBehaviour:
   rightOptionText: Yes, I believe to know who you are.
   altLeftOptionText: 
   altRightOptionText: 
-  dreamText: 
+  dreamText: "HEY YOU! I know you are there, get out of my head\u2026 NOW!"
   leftOptionValue: 0
   rightOptionValue: 0
   picture: {fileID: 21300000, guid: fb9915d20f7cb1f4c85203889fa5470a, type: 3}
