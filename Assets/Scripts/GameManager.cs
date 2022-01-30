@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour {
 
     void Awake() {
         instance = this;
+        AudioManager.Initialize();
     }
 
     void Start() {
@@ -37,6 +38,10 @@ public class GameManager : MonoBehaviour {
     }
 
     public void EndDay(CardScriptableObject cardData) {
+        if (cardData != null) {
+            AudioManager.SetStatus(cardData.altPicture ? 1 : 0);
+            AudioManager.SetTime(1);
+        }
         Utils.instance.CloseEyes(CLOSE_EYES_TIME, () => Sleeping(cardData));
     }
 
@@ -58,6 +63,7 @@ public class GameManager : MonoBehaviour {
         blackPanel.SetActive(false);
         redPanel.SetActive(false);
         Utils.instance.OpenEyes(OPEN_EYES_TIME, () => StartDay(cardData));
+        AudioManager.SetTime(0);
     }
 
     void StartDay(CardScriptableObject cardData) {

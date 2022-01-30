@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-3017878704179436596
+--- !u!114 &-6786271934057020918
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,24 +9,47 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music+Ambient/Progress
   m_EditorClassIdentifier: 
-  Path: event:/Music
-  Guid:
-    Data1: 478851220
-    Data2: 1264402324
-    Data3: -1870554451
-    Data4: 1528221564
-  Banks:
-  - {fileID: 8194474678616824600}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 132923
+  Name: Progress
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 1
+  ID:
+    data1: 1553408474
+    data2: 2283727028
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-4076618529550443789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music+Ambient/Time
+  m_EditorClassIdentifier: 
+  Name: Time
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1238281843
+    data2: 3376530890
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Day
+  - Night
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43,14 +66,95 @@ MonoBehaviour:
   - {fileID: 8354409401264220762}
   - {fileID: 8194474678616824600}
   EditorEvents:
-  - {fileID: -3017878704179436596}
+  - {fileID: 7043044051300577649}
   EditorParameters: []
   MasterBanks:
   - {fileID: 8194474678616824600}
   StringsBanks:
   - {fileID: 8354409401264220762}
-  cacheTime: 637790886219279404
+  cacheTime: 637791008949719616
   cacheVersion: 10
+--- !u!114 &4707575806473542554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music+Ambient/CardPos
+  m_EditorClassIdentifier: 
+  Name: CardPos
+  StudioPath: 
+  Min: -1
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2103132954
+    data2: 4067974239
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &6423824220385410995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music+Ambient/Status
+  m_EditorClassIdentifier: 
+  Name: Status
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 331752852
+    data2: 1565371060
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Calm
+  - Violent
+  Exists: 1
+--- !u!114 &7043044051300577649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music+Ambient
+  m_EditorClassIdentifier: 
+  Path: event:/Music+Ambient
+  Guid:
+    Data1: 478851220
+    Data2: 1264402324
+    Data3: -1870554451
+    Data4: 1528221564
+  Banks:
+  - {fileID: 8194474678616824600}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -6786271934057020918}
+  - {fileID: 6423824220385410995}
+  - {fileID: -4076618529550443789}
+  - {fileID: 4707575806473542554}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 118038
 --- !u!114 &8194474678616824600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,7 +170,7 @@ MonoBehaviour:
   Path: Assets/Audio/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637790886219259495
+  lastModified: 637791008949669799
   FileSizes: []
   Exists: 1
 --- !u!114 &8354409401264220762
@@ -84,8 +188,8 @@ MonoBehaviour:
   Path: Assets/Audio/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637790886219279404
+  lastModified: 637791008949719616
   FileSizes:
   - Name: 
-    Value: 754
+    Value: 934
   Exists: 1
