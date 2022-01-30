@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4a41fcc727932d4a95ac44738ffd21c, type: 3}
+  m_Name: D7
+  m_EditorClassIdentifier: 
+  leftOption: {fileID: 11400000, guid: d4494e4fafe01bb42acb760e7ea6dea4, type: 2}
+  rightOption: {fileID: 11400000, guid: f4d638cf9bc2cb34ebbcda79f55248b9, type: 2}
+  leftOptionText: Prepare a group of hunters, they will go further down the forest
+    and bring wood. Lets pray the spirits for protection during their mission.
+  rightOptionText: Without wood nor close trees to obtain it we need something different
+    to burn. May the ancestors forgive me, we will use the corpses. Let them draw
+    lots to see wich ones are burned and wich ones not
+  altLeftOptionText: 
+  altRightOptionText: 
+  dreamText: 
+  leftOptionValue: 0
+  rightOptionValue: 0
+  picture: {fileID: 21300000, guid: 6742054567a80074392260b738a0b136, type: 3}
+  altPicture: {fileID: 0}
+  master: 0
+  slave: 0
+  seal: {fileID: 21300000, guid: af576736493000e4f84eaa926b4acb27, type: 3}

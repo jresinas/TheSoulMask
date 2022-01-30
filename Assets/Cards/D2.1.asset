@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4a41fcc727932d4a95ac44738ffd21c, type: 3}
+  m_Name: D2.1
+  m_EditorClassIdentifier: 
+  leftOption: {fileID: 11400000, guid: 3d6e6edfa54b470468842893563ac47d, type: 2}
+  rightOption: {fileID: 11400000, guid: 3d6e6edfa54b470468842893563ac47d, type: 2}
+  leftOptionText: This brings nothing but disappointment to me. He will be sent to
+    exile so he crawls through the filth with those as despicable as him.
+  rightOptionText: Treachery has been done. Spirits swarm in hate with the news you
+    have bringed. Let him be set as an example by executing him.
+  altLeftOptionText: 
+  altRightOptionText: 
+  dreamText: 
+  leftOptionValue: 0
+  rightOptionValue: 0
+  picture: {fileID: 21300000, guid: aa35b192bc3a927458323f285a2b56d7, type: 3}
+  altPicture: {fileID: 0}
+  master: 0
+  slave: 0
+  seal: {fileID: 21300000, guid: 190acbe997b20054db6122120f28c67b, type: 3}

@@ -952,7 +952,7 @@ MonoBehaviour:
   blackPanel: {fileID: 1355681030}
   redPanel: {fileID: 922240418}
   ending: {fileID: 1533468455}
-  startingCard: {fileID: 11400000, guid: d001d7e1113428d4dbaa4a67474d46b4, type: 2}
+  startingCard: {fileID: 11400000, guid: 3af7e256f01d14c41b75178d6a87e23f, type: 2}
   score: 0
   START_GAME_DELAYTIME: 2
   CLOSE_EYES_TIME: 1

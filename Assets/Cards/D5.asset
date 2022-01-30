@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4a41fcc727932d4a95ac44738ffd21c, type: 3}
+  m_Name: D5
+  m_EditorClassIdentifier: 
+  leftOption: {fileID: 11400000, guid: 45b92f038bccf044e9608df061dfc388, type: 2}
+  rightOption: {fileID: 11400000, guid: 86ade2ed253516b4fa75252d23fc972f, type: 2}
+  leftOptionText: Fair it is. Offer all the remaining fish to the altar, we must
+    ensure the offer is good enough for the spirits.
+  rightOptionText: Hunger is not a small obstacle and so big problems require big
+    sacrifices. Chose a volunteer and sacrifice them in the altar.
+  altLeftOptionText: 
+  altRightOptionText: 
+  dreamText: 
+  leftOptionValue: 0
+  rightOptionValue: 0
+  picture: {fileID: 21300000, guid: ffc26d0151a561d48985a30c8b414f8e, type: 3}
+  altPicture: {fileID: 0}
+  master: 4
+  slave: 3
+  seal: {fileID: 21300000, guid: 4af6f4e99e921874a8eb6ab0a04dba8d, type: 3}

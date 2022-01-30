@@ -12,20 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4a41fcc727932d4a95ac44738ffd21c, type: 3}
   m_Name: D3
   m_EditorClassIdentifier: 
-  leftOption: {fileID: 0}
-  rightOption: {fileID: 0}
-  leftOptionText: The spirits have  taken a stance. You should punish him but also
+  leftOption: {fileID: 11400000, guid: f3dae8b6e196bf048b974c004a2b6560, type: 2}
+  rightOption: {fileID: 11400000, guid: f3dae8b6e196bf048b974c004a2b6560, type: 2}
+  leftOptionText: The spirits have taken a stance. You should punish him but also
     reeducate him with our traditions.
   rightOptionText: "That is completely UNACCEPTABLE!! The spirits impose a severe
-    punishment for the kid\xB4s dishonour"
+    punishment for the kid \u0301s dishonour"
   altLeftOptionText: "That is completely UNACCEPTABLE!! The spirits impose a severe
-    punishment for the kid\xB4s dishonour"
+    punishment for the kid \u0301s dishonour"
   altRightOptionText: 
   dreamText: 
   leftOptionValue: 0
   rightOptionValue: 0
   picture: {fileID: 21300000, guid: 3e7396b60b099c84891329a6c3fbf5f0, type: 3}
-  altPicture: {fileID: 21300000, guid: 632a0589b4a3f5542aa482f1a40ad378, type: 3}
+  altPicture: {fileID: 21300000, guid: 3627af39b2d47934aa3e8daac8a419fb, type: 3}
   master: 0
   slave: 0
   seal: {fileID: 21300000, guid: df0c74b24a7f13d4cb5e750a1698920b, type: 3}

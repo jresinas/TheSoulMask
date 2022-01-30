@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class MainController : MonoBehaviour, IPointerClickHandler {
     [SerializeField] Image mainScreen;
 
-    public float MENU_FADE_TIME = 1f;
+    public float MENU_FADE_TIME = 0.5f;
 
     public void OnPointerClick(PointerEventData eventData) {
         Fade(mainScreen, MENU_FADE_TIME, true, () => SceneManager.LoadScene(1));

@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour {
     [SerializeField] CardScriptableObject startingCard;
 
     public int score = 0;
+    int dayCount = 0;
+    int dayViolentCount = 0;
     public Dictionary<int, CardOption> masterSlave = new Dictionary<int, CardOption>();
 
     public float START_GAME_DELAYTIME = 2f;
@@ -39,19 +41,25 @@ public class GameManager : MonoBehaviour {
     }
 
     public void EndDay(CardScriptableObject cardData) {
-        if (cardData != null) {
+        dayCount++;
+        if (cardData.altPicture != null) dayViolentCount++;
+
+        if (cardData != null && !IsEncounter()) {
             AudioManager.SetStatus(cardData.altPicture ? 1 : 0);
             AudioManager.SetTime(1);
         }
+
         Utils.instance.CloseEyes(CLOSE_EYES_TIME, () => Sleeping(cardData));
     }
 
     void Sleeping(CardScriptableObject cardData) {
-        dreamText.gameObject.SetActive(true);
- 
-        if (cardData != null) {
+
+        if (cardData != null && !IsEncounter()) {
+            dreamText.gameObject.SetActive(true);
             Utils.instance.Timer(DREAMTEXT_DELAYTIME, () => dreamText.ShowText(cardData.dreamText, DREAMTEXT_TIME));
             Utils.instance.Timer(SLEEP_TIME, () => Wake(cardData));
+        } else if (cardData != null && IsEncounter()) {
+            Wake(cardData);
         } else {
             EndGame();
         }
@@ -61,9 +69,11 @@ public class GameManager : MonoBehaviour {
         card.LoadCard(cardData);
         clipboard.LoadData(cardData);
         blackPanel.SetActive(false);
-        redPanel.SetActive(false);
         Utils.instance.OpenEyes(OPEN_EYES_TIME, () => StartDay(cardData));
-        AudioManager.SetTime(0);
+        if (!IsEncounter()) {
+            redPanel.SetActive(false);
+            AudioManager.SetTime(0);
+        }
     }
 
     void StartDay(CardScriptableObject cardData) {
@@ -71,5 +81,9 @@ public class GameManager : MonoBehaviour {
 
     void EndGame() {
         ending.EndGame(score);
+    }
+
+    bool IsEncounter() {
+        return dayCount > 11;
     }
 }

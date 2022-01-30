@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4a41fcc727932d4a95ac44738ffd21c, type: 3}
+  m_Name: D4.2
+  m_EditorClassIdentifier: 
+  leftOption: {fileID: 11400000, guid: 6a3768972320fdc48a348e182d9df592, type: 2}
+  rightOption: {fileID: 11400000, guid: 6a3768972320fdc48a348e182d9df592, type: 2}
+  leftOptionText: It is sad to say goodbye to such a beloved and respected member
+    but if that is his will that must be the path he chooses.
+  rightOptionText: As heartbroken as I find myself I can not let him leave. The tribe
+    needs intelligent and resourceful people as you. I hope you find peace within
+    yourself.
+  altLeftOptionText: 
+  altRightOptionText: 
+  dreamText: 
+  leftOptionValue: 0
+  rightOptionValue: 0
+  picture: {fileID: 21300000, guid: ea2bbf509560b1046b11d2b9193a3680, type: 3}
+  altPicture: {fileID: 0}
+  master: 0
+  slave: 0
+  seal: {fileID: 21300000, guid: 4125876f29751434d9028521f01cf8f5, type: 3}

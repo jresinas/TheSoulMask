@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4a41fcc727932d4a95ac44738ffd21c, type: 3}
+  m_Name: D5.1
+  m_EditorClassIdentifier: 
+  leftOption: {fileID: 11400000, guid: 42bc7bd88a2cc9c419c43e5a4bc2453d, type: 2}
+  rightOption: {fileID: 11400000, guid: 42bc7bd88a2cc9c419c43e5a4bc2453d, type: 2}
+  leftOptionText: True is that. We will not survive with these many mouths to feed.
+    Order the warriors to sacrifice the injured and weak, may the spirits embrace
+    them in another life.
+  rightOptionText: Then lets be wise and try to ration our food as Good as we can.
+    All will not leave but there is no better choice.
+  altLeftOptionText: 
+  altRightOptionText: Food will not be wasted on the weak. We should kill them now.
+    We must kill them now!
+  dreamText: 
+  leftOptionValue: 0
+  rightOptionValue: 0
+  picture: {fileID: 21300000, guid: e8a04a7786d610747ac0f8ad01f31f94, type: 3}
+  altPicture: {fileID: 21300000, guid: e8a04a7786d610747ac0f8ad01f31f94, type: 3}
+  master: 0
+  slave: 0
+  seal: {fileID: 21300000, guid: 4af6f4e99e921874a8eb6ab0a04dba8d, type: 3}

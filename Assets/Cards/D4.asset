@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4a41fcc727932d4a95ac44738ffd21c, type: 3}
+  m_Name: D4
+  m_EditorClassIdentifier: 
+  leftOption: {fileID: 11400000, guid: 559229ffba34c5a438e30605308e04c5, type: 2}
+  rightOption: {fileID: 11400000, guid: fc549037504d512469a6eb21d635c976, type: 2}
+  leftOptionText: This curse is a message from the spirits. She must be exiled before
+    she spreads it upon the entire town.
+  rightOptionText: While its origin is unknown in our druidess we believe and she
+    should be wise enough to unveil the mistery. Take care of her
+  altLeftOptionText: 
+  altRightOptionText: 
+  dreamText: 
+  leftOptionValue: 0
+  rightOptionValue: 0
+  picture: {fileID: 21300000, guid: 1dd7eb523d9426a498344fb2556cd398, type: 3}
+  altPicture: {fileID: 0}
+  master: 3
+  slave: 0
+  seal: {fileID: 21300000, guid: 4125876f29751434d9028521f01cf8f5, type: 3}

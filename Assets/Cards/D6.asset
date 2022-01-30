@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4a41fcc727932d4a95ac44738ffd21c, type: 3}
+  m_Name: D6
+  m_EditorClassIdentifier: 
+  leftOption: {fileID: 11400000, guid: 1dd1cbae199e2404098bc46102972b1e, type: 2}
+  rightOption: {fileID: 11400000, guid: 1dd1cbae199e2404098bc46102972b1e, type: 2}
+  leftOptionText: Blood is payed with blood. He must be immediately executed.
+  rightOptionText: He must pay for the damage he has done. Capture and torture him,
+    let him feel all the pain he deserves.
+  altLeftOptionText: 
+  altRightOptionText: 
+  dreamText: 
+  leftOptionValue: 0
+  rightOptionValue: 0
+  picture: {fileID: 21300000, guid: da769cf8785485e4eb2a5d5b5318a312, type: 3}
+  altPicture: {fileID: 21300000, guid: da769cf8785485e4eb2a5d5b5318a312, type: 3}
+  master: 0
+  slave: 0
+  seal: {fileID: 21300000, guid: 3b17afe83e0e9d94187dbd3d833e4130, type: 3}
