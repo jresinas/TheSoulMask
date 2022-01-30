@@ -11,6 +11,11 @@ public class MainController : MonoBehaviour, IPointerClickHandler {
 
     public float MENU_FADE_TIME = 0.5f;
 
+    void Start() {
+        AudioManager.Initialize();
+        AudioManager.SetProgress(0);
+    }
+
     public void OnPointerClick(PointerEventData eventData) {
         Fade(mainScreen, MENU_FADE_TIME, true, () => SceneManager.LoadScene(1));
     }

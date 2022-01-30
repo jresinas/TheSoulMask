@@ -31,10 +31,11 @@ public class GameManager : MonoBehaviour {
 
     void Awake() {
         instance = this;
-        AudioManager.Initialize();
+        //AudioManager.Initialize();
     }
 
     void Start() {
+        AudioManager.SetProgress(1);
         card.LoadCard(startingCard);
         clipboard.LoadData(startingCard);
         Utils.instance.Timer(START_GAME_DELAYTIME, () => Utils.instance.OpenEyes(OPEN_EYES_TIME));
@@ -73,6 +74,13 @@ public class GameManager : MonoBehaviour {
         if (!IsEncounter()) {
             redPanel.SetActive(false);
             AudioManager.SetTime(0);
+            if (cardData.altPicture != null) {
+                AudioManager.SetProgress(Mathf.FloorToInt((dayCount - dayViolentCount)/2));
+            } else {
+                AudioManager.SetProgress(dayViolentCount);
+            }
+        } else {
+            AudioManager.SetProgress(4);
         }
     }
 

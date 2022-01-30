@@ -28,11 +28,12 @@ public class EndingController : MonoBehaviour {
                 break;
         }
 
-        Utils.instance.Timer(DELAY_BEFORE_ENDING, () => ShowEnd(selectedEnding));
+        Utils.instance.Timer(DELAY_BEFORE_ENDING, () => ShowEnd(selectedEnding, end));
     }
 
-    void ShowEnd(Image endImage) {
+    void ShowEnd(Image endImage, int end) {
         endImage.gameObject.SetActive(true);
+        AudioManager.SetProgress(end + 7);
         Utils.instance.Fade(endImage, END_FADE_TIME, false);
     }
 }
