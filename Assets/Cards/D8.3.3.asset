@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4a41fcc727932d4a95ac44738ffd21c, type: 3}
+  m_Name: D8.3.3
+  m_EditorClassIdentifier: 
+  leftOption: {fileID: 0}
+  rightOption: {fileID: 0}
+  leftOptionText: Yes, I will give all that I have to you spirits. Nature and I will
+    merge as one...
+  rightOptionText: It is all yours, I do not want to know anything more about this.
+  altLeftOptionText: 
+  altRightOptionText: 
+  dreamText: 
+  leftOptionValue: 1
+  rightOptionValue: 2
+  picture: {fileID: 21300000, guid: cca88467379cf744abbe246c2ff1cdf2, type: 3}
+  altPicture: {fileID: 0}
+  master: 0
+  slave: 0
+  seal: {fileID: 0}

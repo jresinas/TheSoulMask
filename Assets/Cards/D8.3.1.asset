@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4a41fcc727932d4a95ac44738ffd21c, type: 3}
+  m_Name: D8.3.1
+  m_EditorClassIdentifier: 
+  leftOption: {fileID: 11400000, guid: 9e69efcaed0b64e409ff61126a6aa041, type: 2}
+  rightOption: {fileID: 0}
+  leftOptionText: Oh Spirits I have many matters to attend to, my people need me.
+    Let me rest when my services are no longer required.
+  rightOptionText: And your demands I shall obey, I will leave my position and with
+    it my people. I am sad I was not considered wise enough by you spirits to continue
+  altLeftOptionText: 
+  altRightOptionText: 
+  dreamText: 
+  leftOptionValue: 0
+  rightOptionValue: 1
+  picture: {fileID: 21300000, guid: c29fb117d40fa5a448a7a7811e6db789, type: 3}
+  altPicture: {fileID: 0}
+  master: 0
+  slave: 0
+  seal: {fileID: 0}

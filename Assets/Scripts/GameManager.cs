@@ -42,9 +42,9 @@ public class GameManager : MonoBehaviour {
 
     public void EndDay(CardScriptableObject cardData) {
         dayCount++;
-        if (cardData.altPicture != null) dayViolentCount++;
 
         if (cardData != null && !IsEncounter()) {
+            if (cardData.altPicture != null) dayViolentCount++;
             AudioManager.SetStatus(cardData.altPicture ? 1 : 0);
             AudioManager.SetTime(1);
         }

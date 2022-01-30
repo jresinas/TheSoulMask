@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4a41fcc727932d4a95ac44738ffd21c, type: 3}
+  m_Name: D8.2.2
+  m_EditorClassIdentifier: 
+  leftOption: {fileID: 11400000, guid: e7da0c2a5d49712458955144c89df43d, type: 2}
+  rightOption: {fileID: 11400000, guid: 4988381b861bebb4f871755f05c56549, type: 2}
+  leftOptionText: Yes, I am willing to continue the path you spirits have prepared
+    for me.
+  rightOptionText: No, you are no spirit, spirits do not write on simple stone boards.
+    It was you who watered my plants, ate my food and lighted up the candles at night?
+  altLeftOptionText: 
+  altRightOptionText: 
+  dreamText: 
+  leftOptionValue: 0
+  rightOptionValue: 0
+  picture: {fileID: 21300000, guid: 4de7f70408433884a99f9a1d7b7f2afd, type: 3}
+  altPicture: {fileID: 0}
+  master: 0
+  slave: 0
+  seal: {fileID: 0}

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4a41fcc727932d4a95ac44738ffd21c, type: 3}
+  m_Name: D8.3.2-1
+  m_EditorClassIdentifier: 
+  leftOption: {fileID: 11400000, guid: 9016a5fa69a9d11419a5c39b1c3ad7fa, type: 2}
+  rightOption: {fileID: 0}
+  leftOptionText: Oh Spirits I have many matters to attend to, my people need me.
+    Let me rest when my services are no longer required.
+  rightOptionText: I am tired of answering these many requests... I am trying my
+    best but. What do I really know about their problems?
+  altLeftOptionText: 
+  altRightOptionText: 
+  dreamText: 
+  leftOptionValue: 0
+  rightOptionValue: 1
+  picture: {fileID: 21300000, guid: a5918741afab80e48a9c0970f44afb5b, type: 3}
+  altPicture: {fileID: 0}
+  master: 0
+  slave: 0
+  seal: {fileID: 0}

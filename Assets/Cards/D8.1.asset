@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4a41fcc727932d4a95ac44738ffd21c, type: 3}
+  m_Name: D8.1
+  m_EditorClassIdentifier: 
+  leftOption: {fileID: 11400000, guid: 3f151d9bd271ff646bed60abda2bb5c3, type: 2}
+  rightOption: {fileID: 11400000, guid: 5e7f8a18f70dc4449ad1e8e1f60e870a, type: 2}
+  leftOptionText: There si no stamp, I can not know who you are.
+  rightOptionText: Yes, I believe to know who you are.
+  altLeftOptionText: 
+  altRightOptionText: 
+  dreamText: 
+  leftOptionValue: 0
+  rightOptionValue: 0
+  picture: {fileID: 21300000, guid: fb9915d20f7cb1f4c85203889fa5470a, type: 3}
+  altPicture: {fileID: 0}
+  master: 0
+  slave: 0
+  seal: {fileID: 0}

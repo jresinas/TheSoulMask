@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4a41fcc727932d4a95ac44738ffd21c, type: 3}
+  m_Name: D8.4.2
+  m_EditorClassIdentifier: 
+  leftOption: {fileID: 0}
+  rightOption: {fileID: 0}
+  leftOptionText: I have been constrained for far too long, this mask, it suffocates
+    me, I just want to destroy it and breath freely.
+  rightOptionText: I am tired of it all, I do not want to continue, I succumb.
+  altLeftOptionText: 
+  altRightOptionText: 
+  dreamText: 
+  leftOptionValue: 0
+  rightOptionValue: 2
+  picture: {fileID: 21300000, guid: 7daafaf274ddceb40a3550f097ff17a3, type: 3}
+  altPicture: {fileID: 0}
+  master: 0
+  slave: 0
+  seal: {fileID: 0}

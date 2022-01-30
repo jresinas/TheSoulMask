@@ -7,7 +7,8 @@ public class ClipboardController : MonoBehaviour, IPointerClickHandler {
     [SerializeField] SpriteRenderer seal;
 
     public void LoadData(CardScriptableObject card) {
-        seal.sprite = card.seal;
+        if (card.seal != null) seal.sprite = card.seal;
+        else seal.sprite = null;
     }
 
     public void OnPointerClick(PointerEventData eventData) {
