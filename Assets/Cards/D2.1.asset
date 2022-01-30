@@ -20,7 +20,8 @@ MonoBehaviour:
     have bringed. Let him be set as an example by executing him.
   altLeftOptionText: 
   altRightOptionText: 
-  dreamText: 
+  dreamText: People are telling me that during the nights they can see light coming
+    from y house but I always put out the candles right before going to sleep...
   leftOptionValue: 0
   rightOptionValue: 0
   picture: {fileID: 21300000, guid: aa35b192bc3a927458323f285a2b56d7, type: 3}

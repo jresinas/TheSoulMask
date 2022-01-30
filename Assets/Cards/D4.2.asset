@@ -21,7 +21,8 @@ MonoBehaviour:
     yourself.
   altLeftOptionText: 
   altRightOptionText: 
-  dreamText: 
+  dreamText: All that is left is to trust in the spirits, after all is all that I
+    can and must do
   leftOptionValue: 0
   rightOptionValue: 0
   picture: {fileID: 21300000, guid: ea2bbf509560b1046b11d2b9193a3680, type: 3}

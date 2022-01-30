@@ -22,7 +22,8 @@ MonoBehaviour:
   altLeftOptionText: 
   altRightOptionText: Food will not be wasted on the weak. We should kill them now.
     We must kill them now!
-  dreamText: 
+  dreamText: I do not really know if that was the correct decision... The tribe needs
+    me
   leftOptionValue: 0
   rightOptionValue: 0
   picture: {fileID: 21300000, guid: e8a04a7786d610747ac0f8ad01f31f94, type: 3}

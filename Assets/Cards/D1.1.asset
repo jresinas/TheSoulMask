@@ -20,7 +20,9 @@ MonoBehaviour:
     them alone as their supplies may be sparse.
   altLeftOptionText: 
   altRightOptionText: 
-  dreamText: Noche D1.1
+  dreamText: It is getting hard to sleep, my thoughts are clouded, although there
+    is something that worries me even more, I do not remember putting myself these
+    robes.
   leftOptionValue: 0
   rightOptionValue: 0
   picture: {fileID: 21300000, guid: 383121a2ab2d84948a4f5ba5a1201acc, type: 3}

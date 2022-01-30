@@ -19,7 +19,8 @@ MonoBehaviour:
     let him feel all the pain he deserves.
   altLeftOptionText: 
   altRightOptionText: 
-  dreamText: 
+  dreamText: I think today I had a vison from the spirits... Or at least that is
+    what it looked like, their voice was similar to mine
   leftOptionValue: 0
   rightOptionValue: 0
   picture: {fileID: 21300000, guid: da769cf8785485e4eb2a5d5b5318a312, type: 3}

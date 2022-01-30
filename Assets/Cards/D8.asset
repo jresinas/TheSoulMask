@@ -18,7 +18,7 @@ MonoBehaviour:
   rightOptionText: 
   altLeftOptionText: 
   altRightOptionText: 
-  dreamText: 
+  dreamText: "HEY YOU! I know you are there, get out of my head\u2026 NOW!"
   leftOptionValue: 0
   rightOptionValue: 0
   picture: {fileID: 0}

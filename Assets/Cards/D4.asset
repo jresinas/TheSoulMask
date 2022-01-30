@@ -20,7 +20,9 @@ MonoBehaviour:
     should be wise enough to unveil the mistery. Take care of her
   altLeftOptionText: 
   altRightOptionText: 
-  dreamText: 
+  dreamText: I have been looking for hours the stone board they sent me this morning,I
+    do not know why but I fell asleep while reading it and now I do not know where
+    it is, I will have them write it again...
   leftOptionValue: 0
   rightOptionValue: 0
   picture: {fileID: 21300000, guid: 1dd7eb523d9426a498344fb2556cd398, type: 3}

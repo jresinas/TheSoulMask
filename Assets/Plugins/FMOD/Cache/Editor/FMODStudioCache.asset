@@ -50,6 +50,33 @@ MonoBehaviour:
   - Day
   - Night
   Exists: 1
+--- !u!114 &-1819417396393452444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Click2
+  m_EditorClassIdentifier: 
+  Path: event:/Click2
+  Guid:
+    Data1: -907553050
+    Data2: 1201394953
+    Data3: 1922037416
+    Data4: 979244171
+  Banks:
+  - {fileID: 8194474678616824600}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3806
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,12 +94,14 @@ MonoBehaviour:
   - {fileID: 8194474678616824600}
   EditorEvents:
   - {fileID: 7043044051300577649}
+  - {fileID: 9080678014143243473}
+  - {fileID: -1819417396393452444}
   EditorParameters: []
   MasterBanks:
   - {fileID: 8194474678616824600}
   StringsBanks:
   - {fileID: 8354409401264220762}
-  cacheTime: 637791008949719616
+  cacheTime: 637791492936363673
   cacheVersion: 10
 --- !u!114 &4707575806473542554
 MonoBehaviour:
@@ -154,7 +183,7 @@ MonoBehaviour:
   - {fileID: 4707575806473542554}
   MinDistance: 1
   MaxDistance: 20
-  Length: 118038
+  Length: 1555393
 --- !u!114 &8194474678616824600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,7 +199,7 @@ MonoBehaviour:
   Path: Assets/Audio/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637791008949669799
+  lastModified: 637791492936333747
   FileSizes: []
   Exists: 1
 --- !u!114 &8354409401264220762
@@ -188,8 +217,35 @@ MonoBehaviour:
   Path: Assets/Audio/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637791008949719616
+  lastModified: 637791492936363673
   FileSizes:
   - Name: 
-    Value: 934
+    Value: 1114
   Exists: 1
+--- !u!114 &9080678014143243473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Click1
+  m_EditorClassIdentifier: 
+  Path: event:/Click1
+  Guid:
+    Data1: -468771749
+    Data2: 1341378511
+    Data3: -238020168
+    Data4: -2137136072
+  Banks:
+  - {fileID: 8194474678616824600}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2181

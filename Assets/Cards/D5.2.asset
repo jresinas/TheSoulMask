@@ -20,7 +20,8 @@ MonoBehaviour:
     are left defenceless. Make them stay in their homes.
   altLeftOptionText: 
   altRightOptionText: KILL THEM KILL THEM KILL THEM!!!
-  dreamText: 
+  dreamText: I do not really know if that was the correct decision... The tribe needs
+    me
   leftOptionValue: 0
   rightOptionValue: 0
   picture: {fileID: 21300000, guid: 4a49c19591070784e81c06e3a99cfe4d, type: 3}

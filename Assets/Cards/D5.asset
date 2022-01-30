@@ -20,7 +20,8 @@ MonoBehaviour:
     sacrifices. Chose a volunteer and sacrifice them in the altar.
   altLeftOptionText: 
   altRightOptionText: 
-  dreamText: 
+  dreamText: Without a doubt tomorrow is Tuesday, the day after tomorrow Paco is
+    coming to the village.
   leftOptionValue: 0
   rightOptionValue: 0
   picture: {fileID: 21300000, guid: ffc26d0151a561d48985a30c8b414f8e, type: 3}

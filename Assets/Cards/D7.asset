@@ -21,7 +21,8 @@ MonoBehaviour:
     lots to see wich ones are burned and wich ones not
   altLeftOptionText: 
   altRightOptionText: 
-  dreamText: 
+  dreamText: I went to sleep with my mask on, the thing is that I do not remember
+    putting it myself... Something is going on and it is unsettling me
   leftOptionValue: 0
   rightOptionValue: 0
   picture: {fileID: 21300000, guid: 6742054567a80074392260b738a0b136, type: 3}

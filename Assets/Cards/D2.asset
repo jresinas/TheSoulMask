@@ -20,7 +20,8 @@ MonoBehaviour:
     by the spirits to focus on their work.
   altLeftOptionText: 
   altRightOptionText: 
-  dreamText: Noche D2
+  dreamText: The plants in the window were watered today It is strange, I do not
+    remember watering them...
   leftOptionValue: 0
   rightOptionValue: 0
   picture: {fileID: 21300000, guid: 96389fbcc7a3d214daf61c472047f4e2, type: 3}

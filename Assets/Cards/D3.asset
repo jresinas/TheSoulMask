@@ -21,7 +21,8 @@ MonoBehaviour:
   altLeftOptionText: "That is completely UNACCEPTABLE!! The spirits impose a severe
     punishment for the kid \u0301s dishonour"
   altRightOptionText: 
-  dreamText: 
+  dreamText: Ahhg what a shame, some racoons must have entered my house and eaten
+    my food but strangely they have not left any tracks...
   leftOptionValue: 0
   rightOptionValue: 0
   picture: {fileID: 21300000, guid: 3e7396b60b099c84891329a6c3fbf5f0, type: 3}
