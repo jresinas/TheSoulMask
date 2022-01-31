@@ -75,9 +75,11 @@ public class GameManager : MonoBehaviour {
             redPanel.SetActive(false);
             AudioManager.SetTime(0);
             if (cardData.altPicture != null) {
-                AudioManager.SetProgress(Mathf.FloorToInt((dayCount - dayViolentCount)/2));
-            } else {
                 AudioManager.SetProgress(dayViolentCount);
+                Debug.Log(dayViolentCount);
+            } else {
+                AudioManager.SetProgress(Mathf.FloorToInt((dayCount - dayViolentCount)/2));
+                Debug.Log(Mathf.FloorToInt((dayCount - dayViolentCount) / 2));
             }
         } else {
             AudioManager.SetProgress(4);

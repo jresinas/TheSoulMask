@@ -33,6 +33,8 @@ public class CardController : MonoBehaviour, IBeginDragHandler, IEndDragHandler,
         cardPicture.sprite = cardData.picture;
         leftOption.gameObject.SetActive(false);
         rightOption.gameObject.SetActive(false);
+        leftOption.SetHighlight(false);
+        rightOption.SetHighlight(false);
     }
 
     public void OnBeginDrag(PointerEventData eventData) {
@@ -55,9 +57,6 @@ public class CardController : MonoBehaviour, IBeginDragHandler, IEndDragHandler,
         if (rectTransform.localPosition.x >= THRESHOLD) SelectRight();
         else if (rectTransform.localPosition.x <= -THRESHOLD) SelectLeft();
         else ReturnStartPosition();
-
-        leftOption.SetHighlight(false);
-        rightOption.SetHighlight(false);
     }
 
     void SelectRight() {
