@@ -90,19 +90,19 @@ public class Utils : MonoBehaviour {
     */
 
     public void CloseEyes(float time, Action callback = null) {
-        Vector3 topLidStart = new Vector3(0, 930);
-        Vector3 topLidEnd = new Vector3(0, 310);
-        Vector3 bottomLidStart = new Vector3(0, -930);
-        Vector3 bottomLidEnd = new Vector3(0, -310);
+        Vector3 topLidStart = new Vector3(0, 2480);
+        Vector3 topLidEnd = new Vector3(0, 1240);
+        Vector3 bottomLidStart = new Vector3(0, -2480);
+        Vector3 bottomLidEnd = new Vector3(0, -1240);
         Move(topLid, topLidStart, topLidEnd, time, callback);
         Move(bottomLid, bottomLidStart, bottomLidEnd, time);
     }
 
     public void OpenEyes(float time, Action callback = null) {
-        Vector3 topLidStart = new Vector3(0, 310);
-        Vector3 topLidEnd = new Vector3(0, 930);
-        Vector3 bottomLidStart = new Vector3(0, -310);
-        Vector3 bottomLidEnd = new Vector3(0, -930);
+        Vector3 topLidStart = new Vector3(0, 1240);
+        Vector3 topLidEnd = new Vector3(0, 2480);
+        Vector3 bottomLidStart = new Vector3(0, -1240);
+        Vector3 bottomLidEnd = new Vector3(0, -2480);
         Move(topLid, topLidStart, topLidEnd, time, callback);
         Move(bottomLid, bottomLidStart, bottomLidEnd, time);
     }

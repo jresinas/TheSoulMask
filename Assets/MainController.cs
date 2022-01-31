@@ -8,8 +8,13 @@ using UnityEngine.SceneManagement;
 
 public class MainController : MonoBehaviour, IPointerClickHandler {
     [SerializeField] Image mainScreen;
+    [SerializeField] Image useHeadphones;
 
-    public float MENU_FADE_TIME = 0.5f;
+    public float MENU_FADEOUT_TIME = 0.5f;
+    public float USE_HEADPHONES_DELAYTIME = 1f;
+    public float USE_HEADPHONES_TIME = 5f;
+    public float HEADPHONES_FADEIN_TIME = 0.5f;
+    public float HEADPHONES_FADEOUT_TIME = 0.5f;
 
     void Start() {
         AudioManager.Initialize();
@@ -17,7 +22,16 @@ public class MainController : MonoBehaviour, IPointerClickHandler {
     }
 
     public void OnPointerClick(PointerEventData eventData) {
-        Fade(mainScreen, MENU_FADE_TIME, true, () => SceneManager.LoadScene(1));
+        Fade(mainScreen, MENU_FADEOUT_TIME, true, () => Timer(USE_HEADPHONES_DELAYTIME, () => ShowUseHeadphones()));
+    }
+
+    void ShowUseHeadphones() {
+        useHeadphones.gameObject.SetActive(true);
+        Fade(useHeadphones, HEADPHONES_FADEIN_TIME, false, () => UseHeadPhones());
+    }
+
+    void UseHeadPhones() {
+        Timer(USE_HEADPHONES_TIME, () => Fade(useHeadphones, HEADPHONES_FADEOUT_TIME, true, () => SceneManager.LoadScene(1)));
     }
 
     public void Fade(Image image, float time, bool fadeOut = true, Action callback = null) {
@@ -33,6 +47,15 @@ public class MainController : MonoBehaviour, IPointerClickHandler {
             image.color = color;
             yield return null;
         }
+        if (callback != null) callback();
+    }
+
+    public void Timer(float time, Action callback = null) {
+        StartCoroutine(TimerCoroutine(time, callback));
+    }
+
+    IEnumerator TimerCoroutine(float time, Action callback) {
+        yield return new WaitForSecondsRealtime(time);
         if (callback != null) callback();
     }
 }
