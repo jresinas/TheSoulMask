@@ -100,7 +100,7 @@ public class CardController : MonoBehaviour, IBeginDragHandler, IEndDragHandler,
         leftOption.LoadData(cardData.leftOptionText, cardData.altLeftOptionText);
         rightOption.LoadData(cardData.rightOptionText, cardData.altRightOptionText);
         Utils.instance.Timer(BLOCK_DRAG_TIME, () => { block = false; });
-        if (cardData.altPicture != null) Utils.instance.Timer(TIME_BEFORE_TRANSFORM, () => StartTransform());
+        if (cardData.altPicture != null && GameManager.instance.dayViolentCount == 1) Utils.instance.Timer(TIME_BEFORE_TRANSFORM, () => StartTransform());
     }
 
     void StartTransform() {

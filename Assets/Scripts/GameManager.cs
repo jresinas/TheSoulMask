@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour {
 
     public int score = 0;
     int dayCount = 0;
-    int dayViolentCount = 0;
+    public int dayViolentCount = 0;
     public Dictionary<int, CardOption> masterSlave = new Dictionary<int, CardOption>();
 
     public float START_GAME_DELAYTIME = 2f;
@@ -72,16 +72,17 @@ public class GameManager : MonoBehaviour {
         blackPanel.SetActive(false);
         Utils.instance.OpenEyes(OPEN_EYES_TIME, () => StartDay(cardData));
         if (!IsEncounter()) {
-            redPanel.SetActive(false);
             AudioManager.SetTime(0);
             if (cardData.altPicture != null) {
+                if (dayViolentCount == 1) redPanel.SetActive(false);
+                else redPanel.SetActive(true);
                 AudioManager.SetProgress(dayViolentCount);
-                Debug.Log(dayViolentCount);
             } else {
+                redPanel.SetActive(false);
                 AudioManager.SetProgress(Mathf.FloorToInt((dayCount - dayViolentCount)/2));
-                Debug.Log(Mathf.FloorToInt((dayCount - dayViolentCount) / 2));
             }
         } else {
+            redPanel.SetActive(true);
             AudioManager.SetProgress(4);
         }
     }
@@ -94,6 +95,6 @@ public class GameManager : MonoBehaviour {
     }
 
     bool IsEncounter() {
-        return dayCount > 11;
+        return dayCount > 10;
     }
 }
