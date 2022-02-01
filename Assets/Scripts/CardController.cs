@@ -104,13 +104,13 @@ public class CardController : MonoBehaviour, IBeginDragHandler, IEndDragHandler,
     }
 
     void StartTransform() {
-        Utils.instance.CloseEyes(BLINK_CLOSE_EYES_TIME, () => Transform());
+        GameManager.instance.eyeLids.CloseEyes(BLINK_CLOSE_EYES_TIME, () => Transform());
     }
 
     void Transform() {
         GameManager.instance.redPanel.SetActive(true);
         cardPicture.sprite = cardData.altPicture;
-        Utils.instance.OpenEyes(BLINK_OPEN_EYES_TIME);
+        GameManager.instance.eyeLids.OpenEyes(BLINK_OPEN_EYES_TIME);
     }
 
     void CloseCard() {

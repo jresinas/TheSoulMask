@@ -3,32 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Utils : MonoBehaviour {
     public static Utils instance;
-
-    [SerializeField] RectTransform topLid;
-    [SerializeField] RectTransform bottomLid;
-
-    /*
-    float SLEEP_TIME = 1;
-    float BLINK_SPEED = 0.5f;
-    */
 
     void Awake() {
         instance = this;
         DontDestroyOnLoad(gameObject);
     }
 
-    /*
-    void Update() {
-        if (Input.GetKeyDown("b")) Blink();
-        if (Input.GetKeyDown("s")) Sleep();
-    }
-    */
-
-    public void Timer(float time, Action callback = null) {
-        StartCoroutine(TimerCoroutine(time, callback));
+    public Coroutine Timer(float time, Action callback = null) {
+        return StartCoroutine(TimerCoroutine(time, callback));
     }
 
     IEnumerator TimerCoroutine(float time, Action callback) {
@@ -37,12 +23,10 @@ public class Utils : MonoBehaviour {
     }
 
     public void ZoomIn(RectTransform rectTransform, float time, Action callback = null) {
-        //rectTransform.localScale = new Vector3(0.1f, 0.1f);
         StartCoroutine(Zoom(rectTransform, new Vector3(0.1f, 0.1f), new Vector3(1f, 1f), time, callback));
     }
 
     public void ZoomOut(RectTransform rectTransform, float time, Action callback = null) {
-        //rectTransform.localScale = new Vector3(1f, 1f);
         StartCoroutine(Zoom(rectTransform, new Vector3(1f, 1f), new Vector3(0.1f, 0.1f), time, callback));
     }
 
@@ -77,42 +61,27 @@ public class Utils : MonoBehaviour {
         if (callback != null) callback();
     }
 
-    /*
-    public void Sleep() {
-        CloseEyes(BLINK_SPEED, () => Timer(SLEEP_TIME, () => OpenEyes(BLINK_SPEED)));
-    }
-
-    public void Blink() {
-        //Move(topLid, topLidStart, topLidEnd, BLINK_SPEED, () => Move(topLid, topLidEnd, topLidStart, BLINK_SPEED));
-        //Move(bottomLid, bottomLidStart, bottomLidEnd, BLINK_SPEED, () => Move(bottomLid, bottomLidEnd, bottomLidStart, BLINK_SPEED));
-        CloseEyes(BLINK_SPEED, () => OpenEyes(BLINK_SPEED));
-    }
-    */
-
-    public void CloseEyes(float time, Action callback = null) {
-        Vector3 topLidStart = new Vector3(0, 2480);
-        Vector3 topLidEnd = new Vector3(0, 1240);
-        Vector3 bottomLidStart = new Vector3(0, -2480);
-        Vector3 bottomLidEnd = new Vector3(0, -1240);
-        Move(topLid, topLidStart, topLidEnd, time, callback);
-        Move(bottomLid, bottomLidStart, bottomLidEnd, time);
-    }
-
-    public void OpenEyes(float time, Action callback = null) {
-        Vector3 topLidStart = new Vector3(0, 1240);
-        Vector3 topLidEnd = new Vector3(0, 2480);
-        Vector3 bottomLidStart = new Vector3(0, -1240);
-        Vector3 bottomLidEnd = new Vector3(0, -2480);
-        Move(topLid, topLidStart, topLidEnd, time, callback);
-        Move(bottomLid, bottomLidStart, bottomLidEnd, time);
-    }
-
-
     public void Fade(Image image, float time, bool fadeOut = true, Action callback = null) {
         StartCoroutine(FadeOut(image, time, fadeOut, callback));
     }
 
     IEnumerator FadeOut(Image image, float time, bool fadeOut, Action callback = null) {
+        Color color = image.color;
+        for (float f = 0; f <= time; f += Time.deltaTime) {
+            if (image.gameObject == null) break;
+            if (fadeOut) color.a = Mathf.Lerp(1f, 0f, f / time);
+            else color.a = Mathf.Lerp(0f, 1f, f / time);
+            image.color = color;
+            yield return null;
+        }
+        if (callback != null) callback();
+    }
+
+    public void FadeText(TextMeshProUGUI image, float time, bool fadeOut = true, Action callback = null) {
+        StartCoroutine(FadeOutText(image, time, fadeOut, callback));
+    }
+
+    IEnumerator FadeOutText(TextMeshProUGUI image, float time, bool fadeOut, Action callback = null) {
         Color color = image.color;
         for (float f = 0; f <= time; f += Time.deltaTime) {
             if (image.gameObject == null) break;

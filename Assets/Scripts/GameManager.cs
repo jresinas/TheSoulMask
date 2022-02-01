@@ -12,13 +12,14 @@ public class GameManager : MonoBehaviour {
     public CardController card;
     public ClipboardController clipboard;
     public DreamTextController dreamText;
+    public EyelidsController eyeLids;
     public GameObject blackPanel;
     public GameObject redPanel;
     public EndingController ending;
     [SerializeField] CardScriptableObject startingCard;
 
     public int score = 0;
-    int dayCount = 0;
+    int dayCount = 11;
     public int dayViolentCount = 0;
     public Dictionary<int, CardOption> masterSlave = new Dictionary<int, CardOption>();
 
@@ -38,7 +39,7 @@ public class GameManager : MonoBehaviour {
         AudioManager.SetProgress(1);
         card.LoadCard(startingCard);
         clipboard.LoadData(startingCard);
-        Utils.instance.Timer(START_GAME_DELAYTIME, () => Utils.instance.OpenEyes(OPEN_EYES_TIME));
+        Utils.instance.Timer(START_GAME_DELAYTIME, () => eyeLids.OpenEyes(OPEN_EYES_TIME));
     }
 
     public void EndDay(CardScriptableObject cardData) {
@@ -50,7 +51,7 @@ public class GameManager : MonoBehaviour {
             AudioManager.SetTime(1);
         }
 
-        Utils.instance.CloseEyes(CLOSE_EYES_TIME, () => Sleeping(cardData));
+        eyeLids.CloseEyes(CLOSE_EYES_TIME, () => Sleeping(cardData));
     }
 
     void Sleeping(CardScriptableObject cardData) {
@@ -70,7 +71,7 @@ public class GameManager : MonoBehaviour {
         card.LoadCard(cardData);
         clipboard.LoadData(cardData);
         blackPanel.SetActive(false);
-        Utils.instance.OpenEyes(OPEN_EYES_TIME, () => StartDay(cardData));
+        eyeLids.OpenEyes(OPEN_EYES_TIME, () => StartDay(cardData));
         if (!IsEncounter()) {
             AudioManager.SetTime(0);
             if (cardData.altPicture != null) {
