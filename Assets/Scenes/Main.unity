@@ -712,7 +712,7 @@ MonoBehaviour:
     you interact with it it will unfold so you can read what is written on it. \n\nOnce
     read the paper you will have to drag it left or right depending on the decision
     you chose from those given.\n\n\u201CChoose wisely shaman, as you are wiser than
-    us\u201D."
+    us\u201D"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dffedaa80f107d341b0e7d57fdedb83e, type: 2}
   m_sharedMaterial: {fileID: 752578501767935555, guid: dffedaa80f107d341b0e7d57fdedb83e, type: 2}

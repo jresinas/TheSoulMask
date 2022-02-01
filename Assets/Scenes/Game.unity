@@ -1054,7 +1054,7 @@ MonoBehaviour:
   CLOSE_EYES_TIME: 1
   OPEN_EYES_TIME: 1
   SLEEP_TIME: 15
-  DREAMTEXT_DELAYTIME: 2
+  DREAMTEXT_DELAYTIME: 1
   DREAMTEXT_TIME: 12
 --- !u!4 &954645180
 Transform:
@@ -1423,7 +1423,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dffedaa80f107d341b0e7d57fdedb83e, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1487,7 +1487,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1125554020
@@ -2364,6 +2364,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textBox: {fileID: 1125554019}
+  DREAMTEXT_FADEIN_TIME: 1
+  DREAMTEXT_FADEOUT_TIME: 1
 --- !u!224 &1841560786
 RectTransform:
   m_ObjectHideFlags: 0

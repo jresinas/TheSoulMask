@@ -24,11 +24,11 @@ public class GameManager : MonoBehaviour {
     public Dictionary<int, CardOption> masterSlave = new Dictionary<int, CardOption>();
 
     public float START_GAME_DELAYTIME = 2f;
-    public float CLOSE_EYES_TIME = 0.5f;
-    public float OPEN_EYES_TIME = 0.5f;
-    public float SLEEP_TIME = 1.5f;
-    public float DREAMTEXT_DELAYTIME = 0.25f;
-    public float DREAMTEXT_TIME = 1f;
+    public float CLOSE_EYES_TIME = 1f;
+    public float OPEN_EYES_TIME = 1f;
+    public float SLEEP_TIME = 15f;
+    public float DREAMTEXT_DELAYTIME = 2f;
+    public float DREAMTEXT_TIME = 12f;
 
     void Awake() {
         instance = this;
@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour {
 
         if (cardData != null && !IsEncounter()) {
             dreamText.gameObject.SetActive(true);
-            Utils.instance.Timer(DREAMTEXT_DELAYTIME, () => dreamText.ShowText(cardData.dreamText, DREAMTEXT_TIME));
+            Utils.instance.Timer(DREAMTEXT_DELAYTIME, () => dreamText.SetText(cardData.dreamText, DREAMTEXT_TIME));
             Utils.instance.Timer(SLEEP_TIME, () => Wake(cardData));
         } else if (cardData != null && IsEncounter()) {
             Wake(cardData);
