@@ -76,6 +76,7 @@ public class CardController : MonoBehaviour, IBeginDragHandler, IEndDragHandler,
     }
 
     void SelectCard(CardScriptableObject card) {
+        AudioManager.ClickSound();
         CardScriptableObject selectedCard = card;
         if (cardData.slave != 0 && GameManager.instance.masterSlave.ContainsKey(cardData.slave)) {
             if (GameManager.instance.masterSlave[cardData.slave] == CardOption.left) selectedCard = cardData.leftOption;

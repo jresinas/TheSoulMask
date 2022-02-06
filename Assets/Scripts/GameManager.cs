@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour {
     [SerializeField] CardScriptableObject startingCard;
 
     public int score = 0;
-    int dayCount = 0;
+    int dayCount = 1;
     public int dayViolentCount = 0;
     public Dictionary<int, CardOption> masterSlave = new Dictionary<int, CardOption>();
 
@@ -96,6 +96,6 @@ public class GameManager : MonoBehaviour {
     }
 
     bool IsEncounter() {
-        return dayCount > 10;
+        return dayCount > 11;
     }
 }
